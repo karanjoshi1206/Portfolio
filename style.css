@@ -505,7 +505,7 @@ section .title::after {
   .projcard:hover img {
     width: 180px;
     height: 250px;
-    bottom: -20px;
+  
   }
 }
 .about .about-content .left img {
