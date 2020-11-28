@@ -438,6 +438,7 @@ section .title::after {
   text-transform: uppercase;
   font-size: 2em;
   line-height: 1em;
+  margin:20px 0;
 }
 .proj_content p {
   color: white;
