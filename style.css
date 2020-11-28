@@ -10,6 +10,9 @@ body {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* navbar style  */
 
 .navbar {
@@ -388,6 +391,74 @@ section .title::after {
   cursor: pointer;
   transition: all 0.6s ease;
 }
+.projcard {
+  font-family: "Poppins";
+
+  position: relative;
+  width: 550px;
+  height: 390px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, purple, rgb(76, 0, 255));
+}
+.projcard img {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  transition: 0.5s;
+}
+.projcard:hover img {
+  left: 80%;
+  width: 220px;
+}
+
+.projcard .proj_content {
+  position: relative;
+  width: 60%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.projcard:hover .proj_content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.proj_content h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1em;
+}
+.proj_content p {
+  color: white;
+}
+.proj_content a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+  margin: 20px 0;
+  color: #111;
+}
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 /* responsive */
 
@@ -428,48 +499,79 @@ section .title::after {
   }
 }
 @media (max-width: 450px) {
-  .about .about-content .left img {
-    height: 300px;
-    width: 300px;
+  .projcard .proj_content {
+    padding: 30px;
   }
-  .contact .title {
-    margin-bottom: 50px;
-  }
-  .contact .contact-content {
-    width: 100%;
-    justify-content: center;
-  }
-  .services .serv-content .card {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 20px;
-    background-color: rgb(49, 49, 49);
-    text-align: center;
-    border-radius: 6px;
-    padding: 20px;
-    transition: all 0.4s ease;
-  }
-  .skills .skill-content .coloumn {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 20px;
-    text-align: justify;
-    border-radius: 6px;
-    padding: 20px;
-    transition: all 0.4s ease;
-  }
-  .skills .title::after {
-    content: "What I know";
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    font-size: 15px;
-    color: crimson;
-    background-color: white;
-    transform: translateX(-50%);
+  .projcard:hover img {
+    width: 180px;
+    height: 250px;
+    bottom: -20px;
   }
 }
+.about .about-content .left img {
+  height: 300px;
+  width: 300px;
+}
+.contact .title {
+  margin-bottom: 50px;
+}
+.contact .contact-content {
+  width: 100%;
+  justify-content: center;
+}
+.services .serv-content .card {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: rgb(49, 49, 49);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+.skills .skill-content .coloumn {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: justify;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+.skills .title::after {
+  content: "What I know";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 15px;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 996px) {
+  .projcard {
+    position: relative;
+    width: auto;
+    max-width: 600px;
+    transition: 0.5s;
+    align-items: flex-start;
+  }
+  .projcard:hover {
+    height: 600px;
+  }
+  .projcard:hover img {
+    left: 50%;
+    width: 180px;
+  }
+  .projcard .proj_content {
+    width: 100%;
+    left: 0;
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
   .home .max-width {
     padding: 0px 30px;
     margin-left: 0px;
@@ -553,6 +655,13 @@ section .title::after {
     width: 50%;
   }
 }
+@media (max-width: 340px) {
+  .contact .title::after {
+    content: "Lets connect";
+    position: absolute;
+    bottom: -24px;
+  }
+}
 @media (max-width: 590px) {
   .hire .btn {
     padding: 10px 28px;
@@ -579,7 +688,6 @@ section .title::after {
     font-weight: 500;
   }
 }
-
 
 .wb img {
   height: 50px;
