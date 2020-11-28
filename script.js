@@ -33,51 +33,11 @@ $("#scroll").click(function () {
   $([document.documentElement, document.body]).animate(
     {
       scrollTop: $("#home").offset().top,
-    },
-    2000
-  );
-});
-$("#abt").click(function () {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#about").offset().top,
-    },
-    2000
+    }
   );
 });
 
-$("#ser").click(function () {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#services").offset().top,
-    },
-    2000
-  );
-});
-$("#skl").click(function () {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#skills").offset().top,
-    },
-    2000
-  );
-});
-$("#cnt").click(function () {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#contact").offset().top,
-    },
-    2000
-  );
-});
-$("#hme").click(function () {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#home").offset().top,
-    },
-    2000
-  );
-});
+
 
 var typed = new Typed(".typing", {
   strings: ["Web Developer", "Student", "Coder", "Learner"],
