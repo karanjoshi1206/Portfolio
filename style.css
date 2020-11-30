@@ -1,325 +1,700 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src=" https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js">
+body {
+  overflow-x: hidden;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+html {
+  scroll-behavior: smooth;
+}
+/* navbar style  */
 
+.navbar {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  padding: 30px 0px;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  background-color: crimson;
 
-</head>
+  padding: 30px 0px;
+}
 
-<body>
+.navbar .logo a {
+  color: white;
+  font-weight: 600;
+  font-size: 35px;
+}
+.navbar.logo a span {
+  color: crimson;
+}
+.navbar.sticky.logo a span {
+  color: white;
+}
 
-    <div class="scroll-up" id="scroll">
-        <i class="fas fa-angle-up">
+.max-width {
+  max-width: 1300px;
+  padding: 0px 80px;
+  margin: auto;
+}
+.navbar .max-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 35px;
+}
+.navbar .menu li a:hover {
+  color: crimson;
+}
 
-        </i>
-    </div>
-    <div class="wb" id="wb" title="Whatsapp"> <a href="https://api.whatsapp.com/send?phone=+918532055221"> <img
-                src="im.jpg" alt="whatsapp" class="web">
-        </a>
-    </div>
-    <nav class=" navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">KaR<span>aN.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+/* home styling */
 
-    <!-- home section -->
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="txt1">Hello , my name is </div>
-                <div class="txt2">Karan Joshi </div>
-                <div class="txt3">And I'm a <span class="typing"></span> </div>
-                <div class="hire">
-                    <button class="btn"> <a href="mailto:joshikaran392@gmail.com">Hire me</a>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+.home {
+  display: flex;
+  background: url("bg.jpg") no-repeat, center;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+.home .max-width {
+  margin: auto 0 auto 0;
+}
+.home .home-content .txt1 {
+  font-size: 27px;
+}
+.home .home-content .txt2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .txt3 {
+  font-size: 40px;
+  margin: 5px 0px;
+}
+.home .home-content .txt3 span {
+  color: crimson;
+  font-weight: 500;
+}
 
+/* hamburger styling */
 
-    <!-- about section  -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
+.menu-btn {
+  color: white;
+  font-size: 24px;
+  display: none;
+}
+.hire {
+  margin-top: 20px;
+}
+.hire .btn {
+  padding: 12px 36px;
+  font-size: 20px;
+  border-radius: 15px;
+  outline: none;
+  background-color: rgb(255, 2, 53);
+  cursor: pointer;
+  color: white;
+  font-family: "Poppins";
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.hire .btn a {
+  font-size: 20px;
+  color: white;
+  font-family: "Poppins";
+  transition: all 0.3s ease;
+}
+.hire .btn:hover {
+  color: rgb(224, 24, 24);
+  background: none;
+}
 
-            <div class="about-content">
+/* about styling */
 
-                <div class="coloumn left img">
-                    <img src="my.jpg" alt="">
-                </div>
-                <div class="coloumn right">
-                    <div class="text">I am a <span>Web Developer</span>
-                    </div>
-                    <p>My name is Karan Joshi , I am a 2nd year Computer Science undergraduate
-                        I love coding, gaming , and learning new technologies
-                        I completed my schooling form Beersheba Senior Secodary School,Haldwani
-                        I love building web pages .You can Contact me any time for any kind of web development work <br>
-                    </p>
-                    <h4> <br> Hobbies</h4>
-                    <p>Gaming <br> Music <br> Coding</p>
+section {
+  padding: 100px 0px;
+}
+.about,
+.services,
+.skills,
+.contact {
+  font-family: "Poppins", sans-serif;
+}
+section .title {
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+section .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 170px;
+  height: 3px;
+  background-color: black;
+  transform: translateX(-50%);
+}
+section .title::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
+.about .title::after {
+  content: "who I'm";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
+.about .about-content,
+.services .serv-content,
+.skills .skill-content,
+.contact .contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .about-content .left {
+  width: 45%;
+}
+.about .about-content .right {
+  width: 55%;
+}
+.about .about-content .coloumn .right .text {
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.about .about-content .right .text span {
+  color: crimson;
+  font-family: "Ubuntu", sans-serif;
+}
+.about .about-content .right p {
+  text-align: justify;
+}
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.right .btn {
+  margin-top: 20px;
+  padding: 5px 20px;
+  font-size: 20px;
+  border-radius: 15px;
+  outline: none;
+  background-color: rgb(255, 2, 53);
+  cursor: pointer;
+  color: white;
+  font-family: "Poppins";
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.right .btn a {
+  font-size: 20px;
+  color: white;
+  font-family: "Poppins";
+  transition: all 0.3s ease;
+}
+.right .btn:hover {
+  color: black;
+  background: rgb(255, 96, 4);
+}
 
-                    <button class="btn"> <a
-                            href="https://drive.google.com/file/d/1Zgnd00XPK-DRzZVCFvIxSIHjrrk0WxMo/view?usp=sharing">Download
-                            CV</a>
-                    </button>
-                </div>
-            </div>
-        </div>
+/* services styling */
+.services {
+  background-color: black;
+  color: white;
+}
+.services .title::before {
+  background-color: white;
+}
+.services .max-width {
+  padding: 0px;
+}
+.services .title::after {
+  content: "What I do";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  background-color: black;
+  transform: translateX(-50%);
+}
+.services .serv-content .card {
+  width: 33%;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(49, 49, 49);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+.services .serv-content .box i {
+  font-size: 40px;
+  color: crimson;
+  transition: all 0.5s ease;
+}
+.services .serv-content .box {
+  transition: all 0.5s ease;
+}
+.services .serv-content .card:hover {
+  background-color: crimson;
+}
+.services .serv-content .card:hover i {
+  color: white;
+}
 
-    </section>
+.services .serv-content .card:hover .box {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
+.services .serv-content .box .text {
+  font-weight: 500;
+  font-size: 25px;
+  margin: 10px 0;
+}
+.skills .title::after {
+  content: "What I know";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
+.skills .skill-content .coloumn {
+  width: 40%;
+}
+.skill-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-    <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">Services</h2>
+.skills .skill-content .coloumn .left .text {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.skills .skill-content .right .bars {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skills .skill-content .right .bars span {
+  font-weight: 10px;
+  font-weight: 500;
+}
 
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">
-                            <h3>Web Design</h3>
-                        </div>
-                        <p>Web Development is one of my key Skills. I Can design resposive front end design with backend
-                            included. <br><br>
-                            For front-end, technologies I use - HTML5 ,CSS3,JavaScript, BootStrap-5 <br><br>
-                            For back-end, technologies I use - JavaScript, Node.js, express. <br><br>
-                            Database I use- MongoDb.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">
-                            <h3>Marketing</h3>
-                        </div>
-                        <p>I have a good experience of <b>Digital Marketing</b> <br>
-                            I have done two internships in Digital Marketing and Campus Ambasadoor .</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">
-                            <h3>Coding</h3>
-                        </div>
-                        <p><br>
-                        <h3>Python</h3>
-                        Beginner in Python. Trying to learn new concepts daily.
-                        IDE use for Python - VS CODE <br><br>
+.line {
+  height: 5px;
+  width: 100%;
+  background-color: lightgrey;
+  position: relative;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: crimson;
+}
+.line1::before {
+  width: 90%;
+}
+.line2::before {
+  width: 80%;
+}
+.line3::before {
+  width: 70%;
+}
+.line4::before {
+  width: 50%;
+}
+.line5::before {
+  width: 50%;
+}
+.contact .title {
+  margin-bottom: 100px;
+}
+.contact .title::before {
+  background-color: black;
+}
 
-                        <h3>JavaScript</h3>
-                        Basic concepts of JavaScript. I developed a CALCULATOR using JavaScript with front end
-                        included <br>
-                        I use JavaScript as front-end and back-end language in Web Development also <br><br>
+.contact .title::after {
+  content: "Lets connect";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 20px;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
 
-                        <h3>C/C++</h3>
-                        Intermediate level of C/C++ .
-                        Object Oriented Programming
-                        Data Structure
+.scroll-up {
+  position: fixed;
+  background-color: crimson;
+  height: 45px;
+  width: 45px;
+  right: 30px;
+  bottom: 10px;
+  color: white;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+.projcard {
+  font-family: "Poppins";
 
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-link"></i>
-                        <div class="text">
-                            <h3>Github</h3>
-                        </div>
-                        <p>Some of my projects/Web designs are available on Github. Go check it out <br>
-                            Here is a link to my GITHUB account. <br>
-                            <a style="text-decoration:none; color:white;margin-top:40px"
-                                href="https://github.com/karanjoshi1206">Click
-                                here</a>
+  position: relative;
+  width: 550px;
+  height: 390px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, purple, rgb(76, 0, 255));
+}
+.projcard img {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  transition: 0.5s;
+}
+.projcard:hover img {
+  left: 80%;
+  width: 220px;
+}
 
-                        </p>
-                    </div>
-                </div>
-            </div>
+.projcard .proj_content {
+  position: relative;
+  width: 60%;
+  left: 20%;
+  padding: 20px 20px 20px 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
 
+.projcard:hover .proj_content {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.proj_content h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 2em;
+  line-height: 1em;
+  margin: 20px 0;
+}
+.proj_content p {
+  color: white;
+}
+.proj_content a {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: white;
+  margin: 20px 0;
+  color: #111;
+}
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
+/* responsive */
 
-        </div>
+@media (max-width: 1336px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+  .services .serv-content .box .text {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .services .serv-content .card {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px;
+    transition: all 0.4s ease;
+  }
+  .skills .title::after {
+    content: "What I know";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    background-color: white;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 1106px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (max-width: 450px) {
+  .projcard .proj_content {
+    padding: 30px;
+  }
+  .projcard:hover img {
+    width: 180px;
+    height: 250px;
+  }
+}
+.about .about-content .left img {
+  height: 300px;
+  width: 300px;
+}
+.contact .title {
+  margin-bottom: 50px;
+}
+.contact .contact-content {
+  width: 100%;
+  justify-content: center;
+}
+.services .serv-content .card {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: rgb(49, 49, 49);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+.skills .skill-content .coloumn {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: justify;
+  border-radius: 6px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+.skills .title::after {
+  content: "What I know";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  font-size: 15px;
+  color: crimson;
+  background-color: white;
+  transform: translateX(-50%);
+}
 
+@media (max-width: 996px) {
+  .projcard {
+    position: relative;
+    width: auto;
+    max-width: 600px;
+    transition: 0.5s;
+    align-items: flex-start;
+  }
+  .projcard:hover {
+    height: 600px;
+  }
+  .projcard:hover img {
+    left: 50%;
+    width: 180px;
+  }
+  .projcard .proj_content {
+    width: 100%;
+    left: 0;
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+  .home .max-width {
+    padding: 0px 30px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 956px) {
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+  .max-width {
+    max-width: 800px;
+    padding: 0px 40px;
+    margin: auto;
+  }
+  .home .max-width {
+    padding: 0px 30px;
+    margin-left: 0px;
+  }
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background-color: black;
+    text-align: center;
+    padding-top: 70px;
+    transition: all 0.5s ease;
+  }
+  .menu.active {
+    left: -100px;
+  }
+  .navbar .menu li {
+    list-style: none;
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 690px) {
+  .home .max-width {
+    padding: 0px 30px;
+    margin-left: 0px;
+  }
+  .home .home-content .txt1 {
+    font-size: 27px;
+  }
+  .home .home-content .txt2 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-left: -3px;
+  }
+  .home .home-content .txt3 {
+    font-size: 30px;
+    margin: 5px 0px;
+  }
+  .home .home-content .txt3 span {
+    color: crimson;
+    font-weight: 500;
+  }
+  .hire .btn {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+  .about .about-content .coloumn {
+    width: 50%;
+  }
+}
+@media (max-width: 340px) {
+  .contact .title::after {
+    content: "Lets connect";
+    position: absolute;
+    bottom: -24px;
+  }
+}
+@media (max-width: 590px) {
+  .hire .btn {
+    padding: 10px 28px;
+    font-size: 18px;
+  }
+  .home .max-width {
+    padding: 0px 30px;
+    margin-left: 0px;
+  }
+  .home .home-content .txt1 {
+    font-size: 20px;
+  }
+  .home .home-content .txt2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: -3px;
+  }
+  .home .home-content .txt3 {
+    font-size: 25px;
+    margin: 5px 0px;
+  }
+  .home .home-content .txt3 span {
+    color: crimson;
+    font-weight: 500;
+  }
+}
 
-    </section>
-
-
-    <!-- projects setion -->
-    <h2 id="project" style="text-align: center;  font-family: Poppins; " class=" title">Projects</h2>
-
-    <div class="projects">
-
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>News Hub</h2>
-                <p>
-                    NewsHub is a collection of news from all over the world .
-                    To get the lastest news enter Category and your alpha country code
-                    and click on Get News.
-                    Enjoy !!
-                    <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://know-news.herokuapp.com/">See project</a>
-            </div>
-            <img src="/proj_news.png" alt="">
-        </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Just Quote</h2>
-                <p>
-                    JustQuote is a collection of motivational quotes from some of the great personalities of the world
-                    It fetch data from an API and displays the Quote , and the author name , Have a look and enjoy the
-                    day <br> By Karan Joshi
-
-                </p>
-                <a target="__blank" href="https://justquote.herokuapp.com/">See project</a>
-            </div>
-            <img src="/proj_quote.png" alt="">
-        </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Weather Know</h2>
-                <p>
-                    WeatherKnow is application through which you can check the weather of any city with just one click .
-
-                    technologies used - Express Js ,node.js , Javascript , bootstrap
-                    <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://weatherknow.herokuapp.com/">See project</a>
-            </div>
-            <img src="/proj_weather.png" alt="">
-        </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Template for women equality</h2>
-                <p>
-                    Here is a Template on women equality . Fully responsive design
-                    Icons from font-awesome , images from google (replaceble)
-                    <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://women-equality.vercel.app/">See project</a>
-            </div>
-            <img src="/proj_girl.png" alt="">
-        </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Clone of stripe</h2>
-                <p>
-                    Here is a clone of the payment company STRIPE . Fully responsive design
-                    <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://karanjoshi1206.github.io/Stripe/">See project</a>
-            </div>
-            <img src="/proj_stripe.png" alt="">
-        </div>
-    </div>
-
-    <section class="skills" id="skills">
-        <div class="max-width">
-            <div class="title">My Skills</div>
-            <div class="skill-content">
-                <div class="coloumn left">
-                    <div class="text">My Skills and Experience</div>
-                    <p>Here are some my skills and my experience.</p>
-
-                </div>
-                <div class="coloumn right">
-                    <div class="bars">
-                        <div class="info">HTML</div>
-
-                        <span>90%</span>
-                    </div>
-                    <div class="line1 line"></div>
-
-                    <div class="bars">
-                        <div class="info">CSS</div>
-
-                        <span>80%</span>
-                    </div>
-                    <div class="line2 line"></div>
-
-
-                    <div class="bars">
-                        <div class="info">JavaScript</div>
-
-                        <span>70%</span>
-                    </div>
-                    <div class="line3 line"></div>
-
-
-                    <div class="bars">
-                        <div class="info">Node.js</div>
-
-                        <span>50%</span>
-
-                    </div>
-                    <div class="line4 line"></div>
-
-
-                    <div class="bars">
-                        <div class="info">MongoDb</div>
-                        <span>50%</span>
-
-                    </div>
-                    <div class="line5 line"></div>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="coloumn left">
-                    <div class="text">Send your quries via Email . Click on the <h3>Email me</h3> button</div>
-                </div>
-                <div class="coloumn right">
-                    <button class="btn"> <a href="mailto:joshikaran392@gmail.com">Email me</a>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
-    <script src="script.js">
-
-    </script>
-</body>
-
-</html>
+.wb img {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 300px;
+  right: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
