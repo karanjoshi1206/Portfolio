@@ -45,3 +45,9 @@ var typed = new Typed(".typing", {
   backSpeed: 60,
   loop: true,
 });
+
+
+function preloader() {
+  const preloader = document.getElementById("preloader")
+  preloader.style.display = "none"
+}
