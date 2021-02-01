@@ -6,19 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src=" https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
 
 
 </head>
 
-<body onload="preloader()">
-    <div id="preloader" class="preloader">
+<body>
 
-    </div>
     <div class="scroll-up" id="scroll">
         <i class="fas fa-angle-up">
 
@@ -53,7 +47,7 @@
                 <div class="txt2">Karan Joshi </div>
                 <div class="txt3">And I'm a <span class="typing"></span> </div>
                 <div class="hire">
-                    <button class="btn"> <a target="__blank"
+                    <button class="lax lax_preset_jiggle:91:18 btn"> <a target="__blank"
                             href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;tf=1&amp;to=joshikaran392@gmail.com">Hire
                             me</a>
                     </button>
@@ -84,8 +78,9 @@
                     <h4> <br> Hobbies</h4>
                     <p>Gaming <br> Music <br> Coding</p>
 
-                    <button class="btn"> <a
-                            href="https://drive.google.com/file/d/1pqui2IR10qapBzb9cdt0JWQuvOPryvv1/view?usp=sharing">Download
+                    <button class="btn"> <a target="__blank"
+                            href="https://drive.google.com/file/d/18dLsq_lkLdv8k1bCc_WFIE9xn3IfFcdj/view?usp=sharing"
+                            download="KaranJoshi CV">Download
                             CV</a>
                     </button>
                 </div>
@@ -100,7 +95,7 @@
             <h2 class="title">Services</h2>
 
             <div class="serv-content">
-                <div class="card">
+                <div class="lax lax_preset_jiggle:91:4  card">
                     <div class="box">
                         <i class="fas fa-paint-brush"></i>
                         <div class="text">
@@ -109,11 +104,10 @@
                         <p>Web Development is one of my key Skills. I Can design resposive front end design with backend
                             included. <br><br>
                             For front-end, technologies I use - HTML5 ,CSS3,JavaScript, BootStrap-5 <br><br>
-                            For back-end, technologies I use - JavaScript, Node.js, express. <br><br>
-                            Database I use- MongoDb.</p>
+                            For back-end, technologies I use - Node.js, express. .</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="lax lax_preset_jiggle:91:4  card">
                     <div class="box">
                         <i class="fas fa-chart-line"></i>
                         <div class="text">
@@ -123,21 +117,18 @@
                             I have done two internships in Digital Marketing and Campus Ambasadoor .</p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="lax lax_preset_jiggle:91:4 card">
                     <div class="box">
                         <i class="fas fa-code"></i>
                         <div class="text">
                             <h3>Coding</h3>
                         </div>
                         <p><br>
-                        <h3>Python</h3>
-                        Beginner in Python. Trying to learn new concepts daily.
-                        IDE use for Python - VS CODE <br><br>
 
                         <h3>JavaScript</h3>
-                        Basic concepts of JavaScript. I developed a CALCULATOR using JavaScript with front end
-                        included <br>
-                        I use JavaScript as front-end and back-end language in Web Development also <br><br>
+                        Comfortable with Basic to Advance JavaScript <br>
+                        I use JavaScript as front-end and server-side(node.js / express) language in Web Development
+                        also <br><br>
 
                         <h3>C/C++</h3>
                         Intermediate level of C/C++ .
@@ -147,13 +138,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="card">
+                <div class="lax lax_preset_jiggle:91:4 card">
                     <div class="box">
                         <i class="fas fa-link"></i>
                         <div class="text">
                             <h3>Github</h3>
                         </div>
-                        <p>Some of my projects/Web designs are available on Github. Go check it out <br>
+                        <p>Some of my projects/Web designs are available on Github. You can Go check it out <br>
                             Here is a link to my GITHUB account. <br>
                             <a style="text-decoration:none; color:white;margin-top:40px"
                                 href="https://github.com/karanjoshi1206">Click
@@ -173,78 +164,50 @@
 
 
     <!-- projects setion -->
-    <h2 id="project" style="text-align: center;  font-family: Poppins; " class=" title">Projects</h2>
 
-    <div class="projects">
-
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>News Hub</h2>
-                <p>
-                    NewsHub is a collection of news from all over the world .
+    <section class="projects" id="project">
+        <h2 class="title">Projects</h2>
+        <div class="lax lax_preset_hueRotate:2052:245  project_data">
+            <div class="project">
+                <h1 class="proj_title">Weather Know</h1>
+                <p class="proj_desc"> WeatherKnow is application through which you can check the weather of any city
+                    with just one click .
+                    technologies used - Express Js ,node.js , Javascript , bootstrap</p>
+                <a target="__blank" href="https://weatherknow.herokuapp.com/" class="proj_link">See project</a>
+            </div>
+            <div class="project">
+                <h1 class="proj_title">News Hub</h1>
+                <p class="proj_desc"> NewsHub is a collection of news from all over the world .
                     To get the lastest news enter Category and your alpha country code
                     and click on Get News.
-                    Enjoy !!
-                    <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://know-news.herokuapp.com/">See project</a>
+                    Enjoy !!</p>
+                <a target="__blank" href="https://know-news.herokuapp.com/" class="proj_link">See project</a>
             </div>
-            <img src="/images/proj_news.png" alt="">
-        </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Chat App</h2>
-                <p>A real time chat application made using Web sockets which is JavaScript library used to make
+            <div class="project">
+                <h1 class="proj_title">Google Keep Clone</h1>
+                <p class="proj_desc"> Google Keep clone used to store the notes , all the data will be saved in your
+                    local storage
+                    technologies used - HTML5 , CSS3, Javascript </p>
+                <a target="__blank" href="https://google-keep-clone.karanjoshi1206.vercel.app/" class="proj_link">See
+                    project</a>
+            </div>
+            <div class="project">
+                <h1 class="proj_title">Event Website</h1>
+                <p class="proj_desc">This website is created for the conduction of the online hackathon in our college
+                    technologies used - HTML5,CSS3 , Javascript , Google Sheet API</p>
+                <a target="__blank" href="https://hackathon-bias.vercel.app/" class="proj_link">See project</a>
+            </div>
+            <div class="project">
+                <h1 class="proj_title">Chat App</h1>
+                <p class="proj_desc"> A real time chat application made using Web sockets which is JavaScript library
+                    used to make
                     bi-directional communication between client side(front-end) and server side(back-end).
                     . One can
-                    send message only to the room he joined, users in the other room will not get the message
-                    day <br> By Karan Joshi
-                </p>
-                <a target="__blank" href="https://messageit.herokuapp.com/">See project</a>
+                    send message only to the room he joined, users in the other room will not get the message</p>
+                <a target="__blank" href="https://messageit.herokuapp.com/" class="proj_link">See project</a>
             </div>
-            <img src="/images/proj_chat.png" alt="">
         </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Weather Know</h2>
-                <p>
-                    WeatherKnow is application through which you can check the weather of any city with just one click .
-
-                    technologies used - Express Js ,node.js , Javascript , bootstrap
-                    <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://weatherknow.herokuapp.com/">See project</a>
-            </div>
-            <img src="/images/proj_weather.png" alt="">
-        </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Lyrics Finder</h2>
-                <p>
-                    A Javascript application which is used to find the lyrics of the songs,
-                    this application use an API and fetch the data from it.
-                    <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://lyrical.karanjoshi1206.vercel.app/">See project</a>
-            </div>
-            <img src="/images/proj_music.png" alt="">
-        </div>
-        <div class="projcard">
-            <div class="proj_content">
-                <h2>Ecommerce website template</h2>
-                <p>
-                    A simple Ecommerce front-end temeplate with some cool animations like tilt (using tilt.js) and popup
-                    (usingmagnificpopup.js). A completely responsive website <br>
-                    By Karan Joshi
-                </p>
-                <a target="__blank" href="https://ecommerce.karanjoshi1206.vercel.app/">See project</a>
-            </div>
-            <img src="/images/proj_ecomm.png" alt="">
-        </div>
-    </div>
+    </section>
 
     <section class="skills" id="skills">
         <div class="max-width">
@@ -317,10 +280,18 @@
         </div>
 
     </section>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lax.js"></script>
 
+    <script src=" https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="script.js">
 
     </script>
+
+
 </body>
 
 </html>

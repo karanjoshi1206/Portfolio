@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   let scroll_pos = 0;
   $(document).scroll(function () {
@@ -35,7 +36,14 @@ var typed = new Typed(".typing", {
 });
 
 
-function preloader() {
-  const preloader = document.getElementById("preloader")
-  preloader.style.display = "none"
+
+window.onload = function () {
+  lax.init()
+
+  // Add a driver that we use to control our animations
+  lax.addDriver('scrollY', function () {
+    return window.scrollY
+  })
+
+
 }
