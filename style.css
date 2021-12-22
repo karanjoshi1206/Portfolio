@@ -1,668 +1,703 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
 }
 .preloader {
-  background: url("/images/loader.gif");
-  height: 100vh;
-  width: 100%;
-  background-position: center;
-  background-size: 10rem;
-  background-repeat: no-repeat;
+	background: url("/images/loader.gif");
+	height: 100vh;
+	width: 100%;
+	background-position: center;
+	background-size: 10rem;
+	background-repeat: no-repeat;
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 /* navbar style  */
 
 .navbar {
-  z-index: 999;
-  position: fixed;
-  width: 100%;
-  font-family: "Ubuntu", sans-serif;
-  padding: 30px 0px;
-  transition: all 0.3s ease;
+	z-index: 999;
+	position: fixed;
+	width: 100%;
+	font-family: "Ubuntu", sans-serif;
+	padding: 30px 0px;
+	transition: all 0.3s ease;
 }
 .navbar.sticky {
-  background-color: crimson;
+	background-color: crimson;
 
-  padding: 30px 0px;
+	padding: 30px 0px;
 }
 
 .navbar .logo a {
-  color: white;
-  font-weight: 600;
-  font-size: 35px;
+	color: white;
+	font-weight: 600;
+	font-size: 35px;
 }
 .navbar.logo a span {
-  color: crimson;
+	color: crimson;
 }
 .navbar.sticky.logo a span {
-  color: white;
+	color: white;
 }
 
 .max-width {
-  max-width: 1300px;
-  padding: 0px 80px;
-  margin: auto;
+	max-width: 1300px;
+	padding: 0px 80px;
+	margin: auto;
 }
 .navbar .max-width {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .navbar .menu li {
-  list-style: none;
-  display: inline-block;
+	list-style: none;
+	display: inline-block;
 }
 .navbar .menu li a {
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
-  margin-left: 35px;
+	transition: all 0.3s ease;
+	color: white;
+	font-size: 18px;
+	font-weight: 400;
+	margin-left: 35px;
 }
 .navbar .menu li a:hover {
-  color: crimson;
+	color: crimson;
 }
 
 /* home styling */
 
 .home {
-  display: flex;
-  background: url("/images/bg.jpg") no-repeat, center;
-  background-size: cover;
-  height: 100vh;
-  color: white;
-  min-height: 500px;
-  font-family: "Ubuntu", sans-serif;
+	display: flex;
+	background: url("/images/bg.jpg") no-repeat, center;
+	background-size: cover;
+	height: 100vh;
+	color: white;
+	min-height: 500px;
+	font-family: "Ubuntu", sans-serif;
 }
 .home .max-width {
-  margin: auto 0 auto 0;
+	margin: auto 0 auto 0;
 }
 .home .home-content .txt1 {
-  font-size: 27px;
+	font-size: 27px;
 }
 .home .home-content .txt2 {
-  font-size: 75px;
-  font-weight: 600;
-  margin-left: -3px;
+	font-size: 75px;
+	font-weight: 600;
+	margin-left: -3px;
 }
 .home .home-content .txt3 {
-  font-size: 40px;
-  margin: 5px 0px;
+	font-size: 40px;
+	margin: 5px 0px;
 }
 .home .home-content .txt3 span {
-  color: crimson;
-  font-weight: 500;
+	color: crimson;
+	font-weight: 500;
 }
 
 /* hamburger styling */
 
 .menu-btn {
-  color: white;
-  font-size: 24px;
-  display: none;
+	color: white;
+	font-size: 24px;
+	display: none;
 }
 .hire {
-  margin-top: 20px;
+	margin-top: 20px;
 }
 .hire .btn {
-  padding: 12px 36px;
-  font-size: 20px;
-  border-radius: 15px;
-  outline: none;
-  background-color: rgb(255, 2, 53);
-  cursor: pointer;
-  color: white;
-  font-family: "Poppins";
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
+	padding: 12px 36px;
+	font-size: 20px;
+	border-radius: 15px;
+	outline: none;
+	background-color: rgb(255, 2, 53);
+	cursor: pointer;
+	color: white;
+	font-family: "Poppins";
+	border: 2px solid crimson;
+	transition: all 0.3s ease;
 }
 .hire .btn a {
-  font-size: 20px;
-  color: white;
-  font-family: "Poppins";
-  transition: all 0.3s ease;
+	font-size: 20px;
+	color: white;
+	font-family: "Poppins";
+	transition: all 0.3s ease;
 }
 .hire .btn:hover {
-  color: rgb(224, 24, 24);
-  background: none;
+	color: rgb(224, 24, 24);
+	background: none;
 }
 
 /* about styling */
 
 section {
-  padding: 100px 0px;
+	padding: 100px 0px;
 }
 .about,
 .services,
 .skills,
 .contact {
-  font-family: "Poppins", sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 section .title {
-  position: relative;
-  text-align: center;
-  font-size: 25px;
-  margin-bottom: 60px;
-  font-weight: 600;
-  padding-bottom: 20px;
-  font-family: "Ubuntu", sans-serif;
+	position: relative;
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 60px;
+	font-weight: 600;
+	padding-bottom: 20px;
+	font-family: "Ubuntu", sans-serif;
 }
 section .title::before {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  width: 170px;
-  height: 3px;
-  background-color: black;
-  transform: translateX(-50%);
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 170px;
+	height: 3px;
+	background-color: black;
+	transform: translateX(-50%);
 }
 section .title::after {
-  content: "";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  font-size: 20px;
-  color: crimson;
-  background-color: white;
-  transform: translateX(-50%);
+	content: "";
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	font-size: 20px;
+	color: crimson;
+	background-color: white;
+	transform: translateX(-50%);
 }
 .projects .title::after {
-  content: "My work";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  font-size: 20px;
-  color: crimson;
-  background-color: white;
-  transform: translateX(-50%);
+	content: "My work";
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	font-size: 20px;
+	color: crimson;
+	background-color: white;
+	transform: translateX(-50%);
 }
 .about .title::after {
-  content: "who I'm";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  font-size: 20px;
-  color: crimson;
-  background-color: white;
-  transform: translateX(-50%);
+	content: "who I'm";
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	font-size: 20px;
+	color: crimson;
+	background-color: white;
+	transform: translateX(-50%);
 }
 .about .about-content,
 .services .serv-content,
 .skills .skill-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
 }
 .contact .contact-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 .about .about-content .left {
-  width: 45%;
+	width: 45%;
 }
 .about .about-content .right {
-  width: 55%;
+	width: 55%;
 }
 .about .about-content .coloumn .right .text {
-  font-size: 27px;
-  font-weight: 600;
-  margin-bottom: 20px;
+	font-size: 27px;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 .about .about-content .right .text span {
-  color: crimson;
-  font-family: "Ubuntu", sans-serif;
+	color: crimson;
+	font-family: "Ubuntu", sans-serif;
 }
 .about .about-content .right p {
-  text-align: justify;
+	text-align: justify;
 }
 .about .about-content .left img {
-  height: 400px;
-  width: 400px;
-  border-radius: 5px;
-  object-fit: cover;
+	height: 400px;
+	width: 400px;
+	object-fit: cover;
+	filter: invert(1);
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 crimson;
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 10px;
+	animation: pop 2s infinite;
+	border: none;
 }
+@keyframes pop {
+	0% {
+		box-shadow: none;
+	}
+	50% {
+		box-shadow: 0 8px 32px 0 crimson;
+	}
+	100% {
+		box-shadow: none;
+	}
+}
+
 .right .btn {
-  margin-top: 20px;
-  padding: 5px 20px;
-  font-size: 20px;
-  border-radius: 15px;
-  outline: none;
-  background-color: rgb(255, 2, 53);
-  cursor: pointer;
-  color: white;
-  font-family: "Poppins";
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
+	margin-top: 20px;
+	padding: 5px 20px;
+	font-size: 20px;
+	border-radius: 15px;
+	outline: none;
+	background-color: rgb(255, 2, 53);
+	cursor: pointer;
+	color: white;
+	font-family: "Poppins";
+	border: 2px solid crimson;
+	transition: all 0.3s ease;
 }
 .right .btn a {
-  font-size: 20px;
-  color: white;
-  font-family: "Poppins";
-  transition: all 0.3s ease;
+	font-size: 20px;
+	color: white;
+	font-family: "Poppins";
+	transition: all 0.3s ease;
 }
 .right .btn:hover {
-  color: black;
-  background: rgb(255, 96, 4);
+	color: black;
+	background: rgb(255, 96, 4);
 }
 
 /* services styling */
 .services {
-  background-color: black;
-  color: white;
+	background-color: black;
+	color: white;
 }
 .services .title::before {
-  background-color: white;
+	background-color: white;
 }
 .services .max-width {
-  padding: 0px;
+	padding: 0px;
 }
 .services .title::after {
-  content: "What I do";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  font-size: 20px;
-  color: crimson;
-  background-color: black;
-  transform: translateX(-50%);
+	content: "Internships";
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	font-size: 20px;
+	color: crimson;
+	background-color: black;
+	transform: translateX(-50%);
 }
 .services .serv-content .card {
-  width: 33%;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  background-color: rgb(49, 49, 49);
-  text-align: center;
-  border-radius: 6px;
-  padding: 20px;
-  transition: all 0.4s ease;
+	width: 33%;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+	border-radius: 6px;
+	padding: 20px;
+	transition: all 0.4s ease;
+	min-height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 10px;
 }
+
 .services .serv-content .box i {
-  font-size: 40px;
-  color: crimson;
-  transition: all 0.5s ease;
+	font-size: 40px;
+	color: crimson;
+	transition: all 0.5s ease;
 }
 .services .serv-content .box {
-  transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 .services .serv-content .card:hover {
-  background-color: crimson;
+	background-color: crimson;
 }
 .services .serv-content .card:hover i {
-  color: white;
+	color: white;
 }
 
 .services .serv-content .card:hover .box {
-  transform: scale(1.05);
-  cursor: pointer;
+	transform: scale(1.05);
+	cursor: pointer;
 }
 
 .services .serv-content .box .text {
-  font-weight: 500;
-  font-size: 25px;
-  margin: 10px 0;
+	font-weight: 500;
+	font-size: 25px;
+	margin: 10px 0;
 }
 .skills .title::after {
-  content: "What I know";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  font-size: 20px;
-  color: crimson;
-  background-color: white;
-  transform: translateX(-50%);
+	content: "What I know";
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	font-size: 20px;
+	color: crimson;
+	background-color: white;
+	transform: translateX(-50%);
 }
 .skills .skill-content .coloumn {
-  width: 40%;
+	width: 40%;
 }
 .skill-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .skills .skill-content .coloumn .left .text {
-  font-size: 23px;
-  font-weight: 600;
-  margin-bottom: 10px;
+	font-size: 23px;
+	font-weight: 600;
+	margin-bottom: 10px;
 }
 .skills .skill-content .right .bars {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .skills .skill-content .right .bars span {
-  font-weight: 10px;
-  font-weight: 500;
+	font-weight: 10px;
+	font-weight: 500;
 }
 
 .line {
-  height: 5px;
-  width: 100%;
-  background-color: lightgrey;
-  position: relative;
+	height: 5px;
+	width: 100%;
+	background-color: lightgrey;
+	position: relative;
 }
 .line::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background-color: crimson;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	background-color: crimson;
 }
 .line1::before {
-  width: 90%;
+	width: 90%;
 }
 .line2::before {
-  width: 80%;
+	width: 80%;
 }
 .line3::before {
-  width: 70%;
+	width: 70%;
 }
 .line4::before {
-  width: 50%;
+	width: 70%;
 }
 .line5::before {
-  width: 50%;
+	width: 50%;
 }
 .contact .title {
-  margin-bottom: 100px;
+	margin-bottom: 100px;
 }
 .contact .title::before {
-  background-color: black;
+	background-color: black;
 }
 
 .contact .title::after {
-  content: "Lets connect";
-  position: absolute;
-  bottom: -7px;
-  left: 50%;
-  font-size: 20px;
-  color: crimson;
-  background-color: white;
-  transform: translateX(-50%);
+	content: "Lets connect";
+	position: absolute;
+	bottom: -7px;
+	left: 50%;
+	font-size: 20px;
+	color: crimson;
+	background-color: white;
+	transform: translateX(-50%);
 }
 
 .scroll-up {
-  position: fixed;
-  background-color: crimson;
-  height: 45px;
-  width: 45px;
-  right: 30px;
-  bottom: 10px;
-  color: white;
-  text-align: center;
-  line-height: 45px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.6s ease;
+	position: fixed;
+	background-color: crimson;
+	height: 45px;
+	width: 45px;
+	right: 30px;
+	bottom: 10px;
+	color: white;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.6s ease;
 }
 .projects {
-  font-family: "Poppins";
+	font-family: "Poppins";
 }
 .projects .heading {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 40px;
-  letter-spacing: 1.2px;
+	text-align: center;
+	margin: 20px 0;
+	font-size: 40px;
+	letter-spacing: 1.2px;
 }
 .project_data {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
 }
 .project {
-  height: 300px;
-  width: 350px;
-  /* border: 2px solid black; */
-  border-radius: 0px 20px 0px 20px;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2),
-    10px 10px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  background-color: rgb(173, 212, 219);
+	height: 400px;
+	width: 400px;
+	/* width: 100%; */
+	transition: 0.5s all ease;
+	border-radius: 15px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	padding: 40px 20px;
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 10px;
 }
 .project:hover {
-  box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.2),
-    inset 10px 10px 15px rgba(0, 0, 0, 0.2);
+	background: crimson;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(0px);
+	-webkit-backdrop-filter: blur(0px);
+	border-radius: 10px;
+	color: white;
 }
 .proj_link {
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2),
-    10px 10px 15px rgba(0, 0, 0, 0.2);
-  color: black;
-  font-weight: bold;
-  padding: 5px 10px;
+	background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+	border-radius: 10px;
+	color: black;
+	padding: 10px;
 }
-.proj_link:hover {
-  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2),
-    inset 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
+
 /* responsive */
 
 @media (max-width: 1336px) {
-  .home .max-width {
-    margin-left: 0px;
-  }
-  .services .serv-content .box .text {
-    font-weight: 500;
-    font-size: 20px;
-    margin: 10px 0;
-  }
-  .services .serv-content .card {
-    width: 60%;
-    margin: auto;
-    margin-bottom: 20px;
-    background-color: rgb(49, 49, 49);
-    text-align: center;
-    border-radius: 6px;
-    padding: 20px;
-    transition: all 0.4s ease;
-  }
-  .skills .title::after {
-    content: "What I know";
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    font-size: 20px;
-    color: crimson;
-    background-color: white;
-    transform: translateX(-50%);
-  }
+	.home .max-width {
+		margin-left: 0px;
+	}
+	.services .serv-content .box .text {
+		font-weight: 500;
+		font-size: 20px;
+		margin: 10px 0;
+	}
+	.services .serv-content .card {
+		width: 60%;
+		margin: auto;
+		margin-bottom: 20px;
+		background-color: rgb(49, 49, 49);
+		text-align: center;
+		border-radius: 6px;
+		padding: 20px;
+		transition: all 0.4s ease;
+	}
+	.skills .title::after {
+		content: "What I know";
+		position: absolute;
+		bottom: -7px;
+		left: 50%;
+		font-size: 20px;
+		color: crimson;
+		background-color: white;
+		transform: translateX(-50%);
+	}
 }
 @media (max-width: 1106px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
-  }
+	.about .about-content .left img {
+		height: 350px;
+		width: 350px;
+	}
 }
 @media (max-width: 450px) {
-  .about .about-content .left img {
-    height: 300px;
-    width: 300px;
-  }
-  .contact .title {
-    margin-bottom: 50px;
-  }
-  .contact .contact-content {
-    width: 100%;
-    justify-content: center;
-  }
-  .services .serv-content .card {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 20px;
-    background-color: rgb(49, 49, 49);
-    text-align: center;
-    border-radius: 6px;
-    padding: 20px;
-    transition: all 0.4s ease;
-  }
-  .skills .skill-content .coloumn {
-    width: 100%;
-    margin: auto;
-    margin-bottom: 20px;
-    text-align: center;
-    border-radius: 6px;
-    padding: 20px;
-    transition: all 0.4s ease;
-  }
-  .skills .title::after {
-    content: "What I know";
-    position: absolute;
-    bottom: -7px;
-    left: 50%;
-    font-size: 15px;
-    color: crimson;
-    background-color: white;
-    transform: translateX(-50%);
-  }
+	.about .about-content .left img {
+		height: 300px;
+		width: 300px;
+	}
+	.contact .title {
+		margin-bottom: 50px;
+	}
+	.contact .contact-content {
+		width: 100%;
+		justify-content: center;
+	}
+	.services .serv-content .card {
+		width: 90%;
+		margin: auto;
+		margin-bottom: 20px;
+		background-color: rgb(49, 49, 49);
+		text-align: center;
+		border-radius: 6px;
+		padding: 20px;
+		transition: all 0.4s ease;
+	}
+	.skills .skill-content .coloumn {
+		width: 100%;
+		margin: auto;
+		margin-bottom: 20px;
+		text-align: center;
+		border-radius: 6px;
+		padding: 20px;
+		transition: all 0.4s ease;
+	}
+	.skills .title::after {
+		content: "What I know";
+		position: absolute;
+		bottom: -7px;
+		left: 50%;
+		font-size: 15px;
+		color: crimson;
+		background-color: white;
+		transform: translateX(-50%);
+	}
 
-  @media (max-width: 996px) {
-    .home .max-width {
-      padding: 0px 30px;
-      margin-left: 0px;
-    }
-  }
-  @media (max-width: 956px) {
-    .about .about-content .left {
-      display: flex;
-      justify-content: center;
-      margin: 0 auto 60px;
-    }
-    .about .about-content .right {
-      flex: 100%;
-    }
-    .max-width {
-      max-width: 800px;
-      padding: 0px 40px;
-      margin: auto;
-    }
-    .home .max-width {
-      padding: 0px 30px;
-      margin-left: 0px;
-    }
-    .menu-btn {
-      display: block;
-      z-index: 999;
-    }
-    .menu-btn i.active:before {
-      content: "\f00d";
-    }
-    .menu {
-      position: fixed;
-      height: 100vh;
-      width: 100%;
-      left: -100%;
-      top: 0;
-      background-color: black;
-      text-align: center;
-      padding-top: 70px;
-      transition: all 0.5s ease;
-    }
-    .menu.active {
-      left: -100px;
-    }
-    .navbar .menu li {
-      list-style: none;
-      display: block;
-    }
-    .navbar .menu li a {
-      display: inline-block;
-      margin: 20px 0px;
-      font-size: 24px;
-    }
-  }
-  @media (max-width: 690px) {
-    .home .max-width {
-      padding: 0px 30px;
-      margin-left: 0px;
-    }
-    .home .home-content .txt1 {
-      font-size: 27px;
-    }
-    .home .home-content .txt2 {
-      font-size: 45px;
-      font-weight: 600;
-      margin-left: -3px;
-    }
-    .home .home-content .txt3 {
-      font-size: 30px;
-      margin: 5px 0px;
-    }
-    .home .home-content .txt3 span {
-      color: crimson;
-      font-weight: 500;
-    }
-    .hire .btn {
-      padding: 10px 30px;
-      font-size: 18px;
-    }
-    .about .about-content .coloumn {
-      width: 50%;
-    }
-  }
-  @media (max-width: 340px) {
-    .contact .title::after {
-      content: "Lets connect";
-      position: absolute;
-      bottom: -24px;
-    }
-  }
-  @media (max-width: 590px) {
-    .hire .btn {
-      padding: 10px 28px;
-      font-size: 18px;
-    }
-    .home .max-width {
-      padding: 0px 30px;
-      margin-left: 0px;
-    }
-    .home .home-content .txt1 {
-      font-size: 20px;
-    }
-    .home .home-content .txt2 {
-      font-size: 35px;
-      font-weight: 600;
-      margin-left: -3px;
-    }
-    .home .home-content .txt3 {
-      font-size: 25px;
-      margin: 5px 0px;
-    }
-    .home .home-content .txt3 span {
-      color: crimson;
-      font-weight: 500;
-    }
-  }
+	@media (max-width: 996px) {
+		.home .max-width {
+			padding: 0px 30px;
+			margin-left: 0px;
+		}
+	}
+	@media (max-width: 956px) {
+		.about .about-content .left {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto 60px;
+		}
+		.about .about-content .right {
+			flex: 100%;
+		}
+		.max-width {
+			max-width: 800px;
+			padding: 0px 40px;
+			margin: auto;
+		}
+		.home .max-width {
+			padding: 0px 30px;
+			margin-left: 0px;
+		}
+		.menu-btn {
+			display: block;
+			z-index: 999;
+		}
+		.menu-btn i.active:before {
+			content: "\f00d";
+		}
+		.menu {
+			position: fixed;
+			height: 100vh;
+			width: 100%;
+			left: -100%;
+			top: 0;
+			background-color: black;
+			text-align: center;
+			padding-top: 70px;
+			transition: all 0.5s ease;
+		}
+		.menu.active {
+			left: -100px;
+		}
+		.navbar .menu li {
+			list-style: none;
+			display: block;
+		}
+		.navbar .menu li a {
+			display: inline-block;
+			margin: 20px 0px;
+			font-size: 24px;
+		}
+	}
+	@media (max-width: 690px) {
+		.home .max-width {
+			padding: 0px 30px;
+			margin-left: 0px;
+		}
+		.home .home-content .txt1 {
+			font-size: 27px;
+		}
+		.home .home-content .txt2 {
+			font-size: 45px;
+			font-weight: 600;
+			margin-left: -3px;
+		}
+		.home .home-content .txt3 {
+			font-size: 30px;
+			margin: 5px 0px;
+		}
+		.home .home-content .txt3 span {
+			color: crimson;
+			font-weight: 500;
+		}
+		.hire .btn {
+			padding: 10px 30px;
+			font-size: 18px;
+		}
+		.about .about-content .coloumn {
+			width: 50%;
+		}
+	}
+	@media (max-width: 340px) {
+		.contact .title::after {
+			content: "Lets connect";
+			position: absolute;
+			bottom: -24px;
+		}
+	}
+	@media (max-width: 590px) {
+		.hire .btn {
+			padding: 10px 28px;
+			font-size: 18px;
+		}
+		.home .max-width {
+			padding: 0px 30px;
+			margin-left: 0px;
+		}
+		.home .home-content .txt1 {
+			font-size: 20px;
+		}
+		.home .home-content .txt2 {
+			font-size: 35px;
+			font-weight: 600;
+			margin-left: -3px;
+		}
+		.home .home-content .txt3 {
+			font-size: 25px;
+			margin: 5px 0px;
+		}
+		.home .home-content .txt3 span {
+			color: crimson;
+			font-weight: 500;
+		}
+	}
 }
 .wb img {
-  height: 50px;
-  width: 50px;
-  position: fixed;
-  bottom: 300px;
-  right: 20px;
-  border-radius: 50%;
-  cursor: pointer;
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	bottom: 300px;
+	right: 20px;
+	border-radius: 50%;
+	cursor: pointer;
 }
