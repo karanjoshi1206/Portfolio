@@ -8,43 +8,43 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg", 
+        "src": "/images/logo.png",
+        "type": "image/png", 
         "sizes": "72x72"
       },
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg",
+        "src": "/images/logo.png",
+        "type": "image/png",
         "sizes": "96x96"
       },
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg",
+        "src": "/images/logo.png",
+        "type": "image/png",
         "sizes": "128x128"
       },
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg",
+        "src": "/images/logo.png",
+        "type": "image/png",
         "sizes": "144x144"
       },
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg",
+        "src": "/images/logo.png",
+        "type": "image/png",
         "sizes": "152x152"
       },
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg",
+        "src": "/images/logo.png",
+        "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg",
+        "src": "/images/logo.png",
+        "type": "image/png",
         "sizes": "384x384"
       }, 
       {
-        "src": "/images/logo.jpg",
-        "type": "image/jpg",
+        "src": "/images/logo.png",
+        "type": "image/png",
         "sizes": "512x512"
       }
     ]
