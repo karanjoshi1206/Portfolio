@@ -30,7 +30,7 @@ $("#scroll").click(function () {
 });
 
 var typed = new Typed(".typing", {
-	strings: ["Web Developer", "Student", "Coder", "Learner"],
+	strings: ["Web Developer", "reactJs developer", "React native developer"],
 	typeSpeed: 100,
 	backSpeed: 60,
 	loop: true,
