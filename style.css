@@ -111,6 +111,15 @@ html {
 	color: white;
 	font-size: 24px;
 	display: none;
+
+}
+.menu-btn .line{
+	display: block;
+	width: 30px;
+	height: 1px;
+	background-color: white;
+	margin: 5px;
+	border-radius: 5px;
 }
 .hire {
 	margin-top: 20px;
