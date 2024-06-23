@@ -1,0 +1,65 @@
+@import "../../../variables.scss";
+
+.experience-card {
+  background-color: $secondary-color;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  color: $text-color;
+
+  .experience-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $highlight-color;
+    margin-bottom: 0.5rem;
+  }
+
+  .experience-card-company,
+  .experience-card-date,
+  .experience-card-description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.85rem;
+    }
+  }
+
+  .experience-skills-section {
+    .experience-skills-title {
+      font-size: 1rem;
+      color: $highlight-color;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 0.5rem;
+    }
+
+    .experience-skill {
+      background-color: $highlight-color;
+      color: $highlight-text-color;
+      font-size: 0.8rem;
+      padding: 0.4rem;
+      border-radius: 4px;
+    }
+  }
+  .experience-card-company {
+    color: lighten($text-color, 20%);
+  }
+
+  .experience-card-date {
+    color: lighten($text-color, 40%);
+  }
+
+  .experience-card-description {
+    color: lighten($text-color, 30%);
+  }
+}
