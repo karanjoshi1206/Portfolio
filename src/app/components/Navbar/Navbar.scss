@@ -1,0 +1,111 @@
+@import "../../variables.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $primary-color;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  .navbar-logo {
+    a {
+      color: $text-color;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+    cursor: pointer;
+
+    .navbar-toggle-icon {
+      font-size: 2rem;
+      color: $text-color;
+    }
+    .bar {
+      width: 20px;
+      height: 2px;
+      background-color: $text-color;
+      margin: 4px auto;
+      transition: 0.4s;
+      display: block;
+    }
+    &.open{
+      .bar-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      .bar-2 {
+        opacity: 0;
+      }
+      .bar-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+    }
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+
+    li {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    .navbar-toggle {
+      display: block;
+    }
+
+    .navbar-links {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $primary-color;
+      padding: 1rem;
+      gap: 1rem;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+
+      &--open {
+        max-height: 500px; /* Set a max-height large enough to fit all menu items */
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      li {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

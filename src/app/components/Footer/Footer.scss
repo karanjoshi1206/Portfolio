@@ -1,0 +1,110 @@
+/* Footer.scss */
+
+@import "../../variables.scss"; /* Import your SCSS variables file */
+
+.footer {
+  background-color: $secondary-color; /* Use your secondary color */
+  color: $text-color; /* Use your text color */
+  padding: 40px 20px; /* Increase padding for better spacing */
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left; /* Align text to the left on larger screens */
+    }
+
+    .footer-section {
+      margin-bottom: 40px; /* Increase margin for more spacing */
+      flex: 1; /* Ensure each section takes equal space */
+      padding: 0 20px; /* Add padding to each section for more spacing */
+
+      .footer-title {
+        font-size: 1.5em;
+        margin-bottom: 20px; /* Increase bottom margin for spacing */
+        color: $highlight-color; /* Use highlight color for titles */
+      }
+
+      .footer-text {
+        font-size: 1em;
+        line-height: 1.6;
+        text-align: left;
+        a {
+          color: $link-color;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+      }
+      .footer-skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 5px;
+        margin-top: 4px;
+        .footer-skill {
+          background-color: rgba(197, 192, 192, 0.377);
+          padding: 4px;
+          font-size: 12px;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 10px;
+
+          a {
+            color: $link-color; /* Use your link color */
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $link-hover-color; /* Use your link hover color */
+            }
+          }
+        }
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+
+      a {
+        color: $link-color; /* Use your link color */
+        font-size: 1.5em;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $link-hover-color; /* Use your link hover color */
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: darken($secondary-color, 5%);
+    width: 100%;
+
+    p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  }
+}
