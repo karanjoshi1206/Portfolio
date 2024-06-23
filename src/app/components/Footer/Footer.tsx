@@ -31,10 +31,10 @@ const Footer: React.FC = () => {
       <div className="footer-content">
         <div className="footer-section about">
           <h1 className="footer-title">About Me</h1>
-          <p className="footer-text">I'm a web developer with hand's on experience in :</p>
+          <p className="footer-text">I am a web developer with hands on experience in :</p>
           <div className="footer-skills">
-            {techSkills.map((skill) => (
-              <span className="footer-skill"> {skill} </span>
+            {techSkills.map((skill,idx) => (
+              <span key={idx} className="footer-skill"> {skill} </span>
             ))}
           </div>
         </div>
