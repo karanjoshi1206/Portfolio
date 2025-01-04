@@ -17,7 +17,7 @@ const ProjectCard = ({ title, description, techStack, image, demoUrl, codeUrl }:
       <div className="project-image">
         {/* <img src={require(`./images/${image}`).default} alt={title} /> */}
         {/* <img src="https://hackathon-bias.vercel.app/images/im3.png" alt="" /> */}
-        <img src={`/assets/projects/${image}`} alt="" />
+        <Image src={`/assets/projects/${image}`} alt="" width={1000} height={1000} quality={1} />
         {/* <Image src={"/assets/projects/hackathon.png"} alt={title} width={100} height={100} loading="eager" quality={100}/> */}
       </div>
       <div className="project-details">
