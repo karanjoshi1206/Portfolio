@@ -11,7 +11,7 @@ const ProjectsSection = () => {
       <h2 className="projects-title">Projects</h2>
       <div className="projects-content">
         {projects.map((project, index) => (
-          <AnimatedContainer animationType="fade-up" animationDelay={50 * index}>
+          <AnimatedContainer key={index} animationType="fade-up" animationDelay={50 * index}>
             <ProjectCard key={index} title={project.title} description={project.description} techStack={project.techStack} image={project.image} demoUrl={project.demoUrl} codeUrl={project.codeUrl} />
           </AnimatedContainer>
         ))}
