@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./Navbar.scss";
+import AnimatedContainer from "../AnimatedContainer/AnimatedContainer";
 
 const navLinks = [
   {
@@ -40,9 +41,11 @@ const Navbar = () => {
       <ul className={`navbar-links ${isOpen ? "navbar-links--open" : ""}`}>
         {navLinks.map((navLink, index) => (
           <li key={index} className="navbar-item">
-            <a href={navLink.link} className="navbar-link" onClick={toggleMenu}>
-              {navLink.title}
-            </a>
+            <AnimatedContainer key={index} animationType="fade-up" animationDelay={50 * index}>
+              <a href={navLink.link} className="navbar-link" onClick={toggleMenu}>
+                {navLink.title}
+              </a>
+            </AnimatedContainer>
           </li>
         ))}
       </ul>

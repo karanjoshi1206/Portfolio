@@ -3,6 +3,7 @@ import React from "react";
 import "./ExperienceSection.scss";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
 import { experiences } from "./expericeData";
+import AnimatedContainer from "../AnimatedContainer/AnimatedContainer";
 
 const ExperienceSection = () => {
   return (
@@ -10,7 +11,9 @@ const ExperienceSection = () => {
       <h2 className="experience-title">Experience</h2>
       <div className="experience-content">
         {experiences.map((experience, index) => (
-          <ExperienceCard key={index} title={experience.title} company={experience.company} date={experience.date} description={experience.description} skills={experience.skills} />
+          <AnimatedContainer animationType="fade-up" animationDelay={50 * index}>
+            <ExperienceCard key={index} title={experience.title} company={experience.company} date={experience.date} description={experience.description} skills={experience.skills} />
+          </AnimatedContainer>
         ))}
       </div>
     </section>
