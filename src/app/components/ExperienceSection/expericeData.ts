@@ -1,8 +1,15 @@
 export const experiences = [
+    {
+    title: "Software Engineer",
+    company: "DrCode.ai",
+    date: "March 2025 - Present",
+    description:'Handling end-to-end product delivery, designing and developing scalable AI systems, and managing sprints along with task allocation for junior developers',
+      skills: ["React", "TypeScript", "NodeJs", "GenAI", "AWS"]
+  },
   {
     title: "Product Engineer",
     company: "Codingmart Technologies",
-    date: "Feb 2023 - Present",
+    date: "Feb 2023 - Feb 2025",
     description:
       "Designed and developed a high-performance user application with React and TypeScript, integrating real-time data flow with Socket.io and optimizing asset delivery via BunnyCDN. Achieved exceptional performance metrics, including a 90+ Lighthouse score and a fully optimized PWA, while delivering a significant project revamp within a tight timeframe",
     skills: ["React", "TypeScript", "Socket.io", "BunnyCDN", "PWA"]
