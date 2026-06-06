@@ -183,10 +183,11 @@
       li {
         a {
           font-size: 1rem;
-          color: var(--text-primary);
+          color: #ffffff;
           display: block;
-          padding: 0.5rem 0;
+          padding: 1rem 1.5rem;
           width: 100%;
+          text-decoration: none;
 
           &::after {
             bottom: -2px;
