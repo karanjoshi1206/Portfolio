@@ -13,30 +13,48 @@
   position: relative;
   group: "project";
 
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
   &::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent), transparent);
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light), transparent);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   &:hover {
     border-color: var(--accent);
-    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.15);
-    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.2);
+    transform: translateY(-10px);
+
+    &::before {
+      opacity: 1;
+    }
 
     &::after {
       transform: scaleX(1);
     }
 
     .project-image {
-      transform: scale(1.05);
+      transform: scale(1.08);
+    }
+
+    .project-title {
+      color: var(--accent);
     }
   }
 
