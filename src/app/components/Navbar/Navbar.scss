@@ -136,6 +136,8 @@
   .navbar {
     padding: 1rem 1.5rem;
     gap: 1rem;
+    overflow: visible;
+    position: relative;
 
     .navbar-toggle {
       display: flex;
@@ -152,35 +154,39 @@
     }
 
     .navbar-links {
-      flex-direction: column;
-      position: absolute;
-      z-index: 999;
-      top: 100%;
+      position: fixed;
+      top: calc(3.5rem + 1px);
       left: 0;
       right: 0;
-      background-color: var(--navbar-bg);
+      width: 100%;
+      background-color: var(--card-bg);
       border-bottom: 1px solid var(--border-color);
       padding: 1.5rem 1.5rem;
-      gap: 1rem;
+      gap: 1.5rem;
+      z-index: 999;
+      flex-direction: column;
+      
+      /* Hidden by default */
       max-height: 0;
       overflow: hidden;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-10px);
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
 
-      &--open {
+      &.navbar-links--open {
+        display: flex;
         max-height: 500px;
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
       }
 
       li {
         a {
           font-size: 1rem;
+          color: var(--text-primary);
+          display: block;
+          padding: 0.5rem 0;
+          width: 100%;
 
           &::after {
             bottom: -2px;
