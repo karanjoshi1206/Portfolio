@@ -4,20 +4,27 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: $primary-color;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 2.5rem;
+  background-color: var(--navbar-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
   position: relative;
+  transition: all 0.3s ease;
+  gap: 2rem;
 
   .navbar-logo {
+    flex-shrink: 0;
     a {
-      color: $text-color;
-      font-size: 1.5rem;
-      font-weight: bold;
+      color: var(--text-primary);
+      font-size: 1.3rem;
+      font-weight: 700;
       text-decoration: none;
+      letter-spacing: -0.5px;
+      transition: color 0.3s ease;
 
       &:hover {
-        color: $link-hover-color;
+        color: var(--accent);
       }
     }
   }
@@ -25,28 +32,30 @@
   .navbar-toggle {
     display: none;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
 
-    .navbar-toggle-icon {
-      font-size: 2rem;
-      color: $text-color;
-    }
     .bar {
-      width: 20px;
+      width: 22px;
       height: 2px;
-      background-color: $text-color;
-      margin: 4px auto;
-      transition: 0.4s;
+      background-color: var(--text-primary);
+      margin: 5px auto;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       display: block;
     }
-    &.open{
+
+    &.open {
       .bar-1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-8px, 8px);
       }
       .bar-2 {
         opacity: 0;
+        transform: translateX(10px);
       }
       .bar-3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+        transform: rotate(45deg) translate(-7px, -7px);
       }
     }
   }
@@ -54,19 +63,70 @@
   .navbar-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem;
+    flex: 1;
+    justify-content: center;
 
     li {
       a {
-        color: $text-color;
+        color: var(--text-secondary);
         text-decoration: none;
-        font-size: 1rem;
-        transition: color 0.3s;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: var(--accent);
+          transition: width 0.3s ease;
+        }
 
         &:hover {
-          color: $link-hover-color;
+          color: var(--accent);
+
+          &::after {
+            width: 100%;
+          }
         }
       }
+    }
+  }
+
+  .theme-toggle {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--button-bg);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+
+    svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background-color: var(--accent);
+      color: var(--button-text);
+      border-color: var(--accent);
+      transform: scale(1.1) rotate(20deg);
+    }
+
+    &:active {
+      transform: scale(0.95);
     }
   }
 }
@@ -74,29 +134,45 @@
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .navbar {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+
     .navbar-toggle {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      order: 2;
+    }
+
+    .navbar-logo {
+      order: 1;
+    }
+
+    .theme-toggle {
+      order: 3;
     }
 
     .navbar-links {
       flex-direction: column;
       position: absolute;
-      z-index: 1;
+      z-index: 999;
       top: 100%;
       left: 0;
       right: 0;
-      background-color: $primary-color;
-      padding: 1rem;
+      background-color: var(--navbar-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.5rem 1.5rem;
       gap: 1rem;
       max-height: 0;
       overflow: hidden;
       opacity: 0;
       visibility: hidden;
       transform: translateY(-10px);
-      transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
 
       &--open {
-        max-height: 500px; /* Set a max-height large enough to fit all menu items */
+        max-height: 500px;
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -105,6 +181,10 @@
       li {
         a {
           font-size: 1rem;
+
+          &::after {
+            bottom: -2px;
+          }
         }
       }
     }

@@ -11,8 +11,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Karan Joshi",
-  description: "A passionate Web Developer specializing in modern web technologies. I build responsive and performant web applications"
+  title: "Karan Joshi - Full Stack Developer",
+  description: "A passionate Web Developer specializing in modern web technologies. I build responsive and performant web applications with intuitive design.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              const theme = localStorage.getItem('theme') || 'dark';
+              document.documentElement.setAttribute('data-theme', theme);
+            `,
+          }}
+        />
+      </head>
       <body className={poppins.className}>
         <Navbar />
         {children}

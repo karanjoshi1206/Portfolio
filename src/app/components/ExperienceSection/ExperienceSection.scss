@@ -1,26 +1,31 @@
 @import "../../variables.scss";
 
 .experience-section {
-  background-color: $primary-color;
-  color: $text-color;
-  padding: 4rem 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 6rem 2rem;
   text-align: center;
+  border-top: 1px solid var(--border-color);
 
   .experience-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 
     @media (max-width: 768px) {
       font-size: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     @media (max-width: 480px) {
       font-size: 1.75rem;
+      margin-bottom: 2rem;
     }
   }
 
   .experience-content {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: left;
   }
