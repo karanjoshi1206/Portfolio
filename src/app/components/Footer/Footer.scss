@@ -3,63 +3,115 @@
 @import "../../variables.scss";
 
 .footer {
-  background-color: $secondary-color;
-  color: $text-color; /* Use your text color */
-  padding: 40px 20px; /* Increase padding for better spacing */
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  padding: 5rem 2rem 3rem;
   text-align: center;
+  border-top: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    transform: translateX(-50%);
+  }
 
   @media screen and (max-width: 768px) {
-    padding: 40px 0;
+    padding: 2.5rem 1.5rem;
   }
+
   .footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
 
     @media (min-width: 768px) {
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-      text-align: left; /* Align text to the left on larger screens */
+      text-align: left;
+      gap: 3rem;
     }
 
     .footer-section {
-      margin-bottom: 40px; /* Increase margin for more spacing */
-      flex: 1; /* Ensure each section takes equal space */
-      padding: 0 20px; /* Add padding to each section for more spacing */
+      margin-bottom: 2rem;
+      flex: 1;
+      padding: 0;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
 
       .footer-title {
-        font-size: 1.5em;
-        margin-bottom: 20px; /* Increase bottom margin for spacing */
-        color: $highlight-color; /* Use highlight color for titles */
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+        font-weight: 700;
+        transition: color 0.3s ease;
       }
 
       .footer-text {
-        font-size: 1em;
-        line-height: 1.6;
+        font-size: 0.95rem;
+        line-height: 1.7;
         text-align: left;
+        color: var(--text-secondary);
+
         a {
-          color: $link-color;
+          color: var(--accent);
           text-decoration: none;
-          transition: color 0.3s ease;
+          transition: all 0.3s ease;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+          }
+
           &:hover {
-            color: $link-hover-color;
+            color: var(--accent-hover);
+
+            &::after {
+              width: 100%;
+            }
           }
         }
       }
+
       .footer-skills {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        gap: 5px;
-        margin-top: 4px;
+        gap: 0.5rem;
+        margin-top: 1rem;
+
         .footer-skill {
-          background-color: rgba(197, 192, 192, 0.377);
-          padding: 4px;
-          font-size: 12px;
+          background-color: var(--button-bg);
+          padding: 0.4rem 0.8rem;
+          font-size: 0.8rem;
+          border-radius: 50px;
+          border: 1px solid var(--border-color);
+          color: var(--text-secondary);
+          transition: all 0.3s ease;
+
+          &:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+          }
         }
       }
 
@@ -68,15 +120,16 @@
         padding: 0;
 
         li {
-          margin-bottom: 10px;
+          margin-bottom: 0.7rem;
 
           a {
-            color: $link-color; /* Use your link color */
+            color: var(--text-secondary);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            font-weight: 500;
 
             &:hover {
-              color: $link-hover-color; /* Use your link hover color */
+              color: var(--accent);
             }
           }
         }
@@ -85,15 +138,53 @@
 
     .social-links {
       display: flex;
-      gap: 15px;
+      gap: 1.5rem;
+      justify-content: center;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+      }
 
       a {
-        color: $link-color; /* Use your link color */
-        font-size: 1.5em;
-        transition: color 0.3s ease;
+        color: var(--text-secondary);
+        font-size: 1.3rem;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: var(--button-bg);
+        border: 2px solid var(--border-color);
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, var(--accent), var(--accent-light));
+          opacity: 0;
+          transition: opacity 0.4s ease;
+          border-radius: 50%;
+        }
 
         &:hover {
-          color: $link-hover-color; /* Use your link hover color */
+          color: white;
+          border-color: var(--accent);
+          transform: translateY(-6px) scale(1.1);
+
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &:active {
+          transform: translateY(-2px) scale(1);
         }
       }
     }
@@ -101,13 +192,15 @@
 
   .footer-bottom {
     text-align: center;
-    padding: 10px 0;
-    background-color: darken($secondary-color, 5%);
+    padding: 1.5rem 0 0 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
     width: 100%;
 
     p {
       margin: 0;
-      font-size: 0.9em;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
     }
   }
 }

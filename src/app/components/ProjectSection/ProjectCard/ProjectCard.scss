@@ -1,71 +1,162 @@
 @import "../../../variables.scss";
-.project-card {
-  background-color: $secondary-color;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  width: 450px;
-  text-align: left;
-  transition: transform 0.3s ease;
 
-  @media screen and (max-width:480px) {
-    width: 100%;
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  group: "project";
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
   &:hover {
-    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.2);
+    transform: translateY(-10px);
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      transform: scaleX(1);
+    }
+
+    .project-image {
+      transform: scale(1.08);
+    }
+
+    .project-title {
+      color: var(--accent);
+    }
   }
 
   .project-image {
-    height: 200px;
+    height: 220px;
     overflow: hidden;
+    background-color: var(--bg-secondary);
+    position: relative;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
   }
 
   .project-details {
-    padding: 1.5rem;
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
     .project-title {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+      transition: color 0.3s ease;
     }
 
     .project-description {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-      line-height: 1.5;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      flex: 1;
     }
 
     .project-tech-stack {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+
       .tech {
-        font-size: 0.9rem;
-        background-color: lighten($primary-color, 10%);
-        color: $text-color;
-        padding: 0.3rem 0.5rem;
-        border-radius: 5px;
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        background-color: var(--button-bg);
+        color: var(--text-primary);
+        padding: 0.4rem 0.9rem;
+        border-radius: 50px;
         display: inline-block;
+        border: 1px solid var(--border-color);
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: var(--accent);
+          background-color: var(--accent);
+          color: white;
+          transform: translateY(-2px);
+        }
       }
     }
 
     .project-links {
+      display: flex;
+      gap: 1.5rem;
+
       .project-link {
-        color: $link-color;
+        color: var(--accent);
         font-size: 0.9rem;
         text-decoration: none;
-        margin-right: 1rem;
-        transition: color 0.3s ease;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+        padding-bottom: 4px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: var(--accent);
+          transition: width 0.3s ease;
+        }
 
         &:hover {
-          color: lighten($link-color, 20%);
+          color: var(--accent-hover);
+
+          &::after {
+            width: 100%;
+          }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .project-details {
+      padding: 1.5rem;
     }
   }
 }

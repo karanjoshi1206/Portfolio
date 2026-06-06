@@ -1,35 +1,61 @@
 /* ProjectsSection.scss */
-
-$primary-color: #121212;
-$secondary-color: #1f1f1f;
-$text-color: #ffffff;
-$link-color: #bb86fc;
+@import "../../variables.scss";
 
 .projects-section {
-  background-color: $primary-color;
-  color: $text-color;
-  padding: 4rem 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 7rem 2rem;
   text-align: center;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent) 0%, transparent 50%);
+    opacity: 0.2;
+    transform: translateX(-50%);
+  }
 
   .projects-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: 768px) {
-      font-size: 2rem;
+      font-size: 2.2rem;
     }
 
     @media (max-width: 480px) {
-      font-size: 1.75rem;
+      font-size: 1.8rem;
     }
   }
 
+  .projects-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    font-weight: 400;
+  }
+
   .projects-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      gap: 2rem;
+    }
   }
 }

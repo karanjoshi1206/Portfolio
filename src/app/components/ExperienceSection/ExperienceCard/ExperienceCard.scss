@@ -1,17 +1,60 @@
 @import "../../../variables.scss";
 
 .experience-card {
-  background-color: $secondary-color;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  color: $text-color;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(59, 130, 246, 0.05) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: var(--accent);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
+    transform: translateY(-6px);
+
+    &::before {
+      transform: scaleX(1);
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
 
   .experience-card-title {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: $highlight-color;
+    font-weight: 700;
+    color: var(--accent);
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
   }
 
   .experience-card-company,
@@ -19,6 +62,7 @@
   .experience-card-description {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
 
     @media (max-width: 768px) {
       font-size: 0.9rem;
@@ -30,36 +74,52 @@
   }
 
   .experience-skills-section {
+    margin-top: 1.5rem;
+
     .experience-skills-title {
-      font-size: 1rem;
-      color: $highlight-color;
-      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .experience-skills-list {
       display: flex;
       flex-wrap: wrap;
       list-style: none;
-      gap: 0.5rem;
+      gap: 0.7rem;
     }
 
     .experience-skill {
-      background-color: $highlight-color;
-      color: $highlight-text-color;
+      background-color: var(--accent);
+      color: white;
       font-size: 0.8rem;
-      padding: 0.4rem;
-      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--accent-hover);
+        transform: scale(1.05);
+      }
     }
   }
+
   .experience-card-company {
-    color: lighten($text-color, 20%);
+    color: var(--accent);
+    font-weight: 600;
   }
 
   .experience-card-date {
-    color: lighten($text-color, 40%);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
   }
 
   .experience-card-description {
-    color: lighten($text-color, 30%);
+    color: var(--text-secondary);
+    line-height: 1.6;
   }
 }
