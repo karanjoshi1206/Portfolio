@@ -12,6 +12,7 @@
   position: relative;
   transition: all 0.3s ease;
   gap: 2rem;
+  z-index: 9999;
 
   .navbar-logo {
     flex-shrink: 0;
@@ -163,7 +164,7 @@
       border-bottom: 1px solid var(--border-color);
       padding: 1.5rem 1.5rem;
       gap: 1.5rem;
-      z-index: 999;
+      z-index: 10000;
       flex-direction: column;
       
       /* Hidden by default */
@@ -183,7 +184,7 @@
       li {
         a {
           font-size: 1rem;
-          color: #ffffff;
+          color: var(--text-primary);
           display: block;
           padding: 1rem 1.5rem;
           width: 100%;
