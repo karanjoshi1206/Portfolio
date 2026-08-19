@@ -57,7 +57,6 @@ const Footer: React.FC = () => {
               joshikaran392@gmail.com
             </a>
           </p>
-          <p className="footer-text">Phone: +91 8532055221</p>
         </div>
         <div className="footer-section social">
           <h1 className="footer-title">Follow Me</h1>
