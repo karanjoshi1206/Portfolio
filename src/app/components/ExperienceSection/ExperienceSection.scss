@@ -1,55 +1,5 @@
-@import "../../variables.scss";
-
-.experience-section {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  padding: 7rem 2rem;
-  text-align: center;
-  border-top: 1px solid var(--border-color);
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(to bottom, var(--accent) 0%, transparent 50%);
-    opacity: 0.2;
-    transform: translateX(-50%);
-  }
-
-  .experience-title {
-    font-size: 3.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 900;
-    letter-spacing: -1px;
-    position: relative;
-    z-index: 1;
-
-    @media (max-width: 768px) {
-      font-size: 2.2rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 1.8rem;
-    }
-  }
-
-  .experience-subtitle {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin-bottom: 3rem;
-    font-weight: 400;
-  }
-
-  .experience-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-    position: relative;
-    z-index: 1;
-  }
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
 }
-
