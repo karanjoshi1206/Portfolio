@@ -5,6 +5,7 @@ import "./Navbar.scss";
 const navLinks = [
   { title: "Experience", link: "#experience" },
   { title: "Projects", link: "#projects" },
+  { title: "Skills", link: "#skills" },
   { title: "Contact", link: "#contact" }
 ];
 
@@ -18,6 +19,14 @@ const Navbar = () => {
 
     setIsDark(shouldBeDark);
     applyTheme(shouldBeDark);
+  }, []);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
   const applyTheme = (isDarkTheme: boolean) => {
@@ -58,7 +67,12 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+            <button
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-pressed={isDark}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+            >
               {isDark ? "Light" : "Dark"}
             </button>
           </li>

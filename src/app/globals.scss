@@ -51,6 +51,12 @@ a:hover {
   color: var(--muted);
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid var(--ink);
+  outline-offset: 3px;
+}
+
 .page {
   min-height: 100vh;
 }
@@ -100,6 +106,11 @@ a:hover {
     display: none !important;
   }
 
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .section,
   .hero-section {
     border-color: #cccccc;
@@ -112,8 +123,22 @@ a:hover {
     color: inherit;
   }
 
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #444444;
+  }
+
   .hero-section {
     min-height: 0;
     padding-top: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
