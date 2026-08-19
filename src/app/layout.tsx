@@ -1,24 +1,27 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Instrument_Serif, Inter } from "next/font/google";
 import "./globals.scss";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import "aos/dist/aos.css";
 
-const poppins = Poppins({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"]
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600"]
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  variable: "--font-instrument",
+  weight: "400",
+  style: ["normal", "italic"]
 });
 
 export const metadata: Metadata = {
-  title: "Karan Joshi - Full Stack Developer",
-  description: "A passionate Web Developer specializing in modern web technologies. I build responsive and performant web applications with intuitive design.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+  title: "Karan Joshi — Full Stack Developer",
+  description:
+    "A passionate Web Developer specializing in modern web technologies. I build responsive and performant web applications with intuitive design."
 };
 
 export default function RootLayout({
@@ -27,18 +30,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="light">
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              const theme = localStorage.getItem('theme') || 'dark';
+              const theme = localStorage.getItem('theme') || 'light';
               document.documentElement.setAttribute('data-theme', theme);
-            `,
+            `
           }}
         />
       </head>
-      <body className={poppins.className}>
+      <body className={`${inter.variable} ${instrumentSerif.variable} ${inter.className}`}>
         <Navbar />
         {children}
         <Footer />
