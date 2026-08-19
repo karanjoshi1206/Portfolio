@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -41,7 +41,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${instrumentSerif.variable} ${inter.className}`}>
+      <body className={inter.className}>
         <Navbar />
         {children}
         <Footer />
